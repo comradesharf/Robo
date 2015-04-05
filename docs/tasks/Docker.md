@@ -9,7 +9,7 @@ Builds Docker image
 <?php
 $this->taskDockerBuild()->run();
 
-$this->dockerBuild('path/to/dir')
+$this->taskDockerBuild('path/to/dir')
      ->tag('database')
      ->run();
 
@@ -43,7 +43,7 @@ $result = $this->taskDockerRun('db')
      ->exec('./prepare_database.sh')
      ->run();
 
-$task->dockerCommit($result)
+$task->taskDockerCommit($result)
      ->name('my/database')
      ->run();
 ```
